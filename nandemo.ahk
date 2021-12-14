@@ -11,7 +11,7 @@ NumLock & D::
   Run explorer.exe C:\Users\Bucket\Documents\aviutl110\forcepser.exe
   Run explorer.exe C:\Program Files\VOICEVOX\VOICEVOX.exe
   Run,C:\Users\Bucket\Documents\sozai
-  Run,C:\Program Files\AutoHotkey\AutoHotkey.exe Aviutl.ahk
+  Run,C:\Program Files\AutoHotkey\AutoHotkey.exe ../Aviutl/Aviutl.ahk
   WinWait,wt_test,,2	;必ず起動確認してから終わる
   Return
 
@@ -35,6 +35,8 @@ NumLock & W::Run,C:\work
 
 ;　メモ帳
 #ctrl::Run notepad
+; MusicBee再生
+NumLock & P::Run explorer.exe C:\work\Python\AutoMusic\mPlay.py
 
 ; 翻訳
 NumLock & H::
