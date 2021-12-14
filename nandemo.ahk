@@ -39,11 +39,24 @@ NumLock & W::Run,C:\work
 NumLock & P::Run explorer.exe C:\work\Python\AutoMusic\mPlay.py
 
 ; 翻訳
-NumLock & H::
+vk1D & Z::
+  send, ^c
   browser := "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
   Run , %browser% "https://translate.google.co.jp/?hl=ja&tab=rT"
+  sleep 1000
+  send, ^v
+  Return
 
-Return
+; xPath起動　vk1Dは無変換
+vk1D & A::
+  Send ^+u
+  ;#space
 
-
-;#space
+vk1D & K::
+  Send ^+u
+; シャットダウンしたいなぁ
+NumLock & S::
+  Run explorer.exe C:\Users\Bucket\AppData\Local\Programs\Opera\opera.exe
+  Run explorer.exe C:\work\Python\AutoMusic\clickSPK.py
+  Run explorer.exe C:\work\bat\shutdown.bat
+  Return
